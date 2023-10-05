@@ -1,0 +1,38 @@
+header {
+  border-bottom: 1px solid black;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.primary-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.shopping-cart {
+  text-wrap: nowrap;
+  top: 0;
+  left: 100%;
+  animation: 1s forwards cart-slide-in;
+}
+
+@keyframes cart-slide-in {
+  0% {
+    transform: translateX(0%);
+  } 
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* .shopping-cart::backdrop {
+  background-color: blue;
+} */

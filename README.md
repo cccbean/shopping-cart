@@ -1,8 +1,15 @@
-# React + Vite
+# Shopping Cart
+## Pages
+- Home
+- Shop
+- Product Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Components
+- Header
+- Shopping Cart
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Things to implement
+- Animation for cart closing, already have the opening animation
+- Star display using the rating data from API
+- Change filter buttons to checkboxes?
+- Categories should have their own paths, filters should have search params

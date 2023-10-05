@@ -3,20 +3,28 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 import Card from './Card';
 import { useState, useEffect } from 'react';
+import cartSvg from '../assets/cart.svg';
 
 const Header = ({ cart, setCart }) => {
-  const [closing, setClosing] = useState(true);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const modal = useRef();
 
   useEffect(() => {
-    if (closing) {
+    if (modalIsOpen) {
+      modal.current.showModal();
+    } else {
       setTimeout(() => {
         modal.current.close();
       }, 500);
-    } else {
-      modal.current.showModal();
     }
-  }, [closing]);
+  }, [modalIsOpen]);
+
+  const handleESC = (e) => {
+    if (e.code === 'Escape') {
+      e.preventDefault();
+      setModalIsOpen(false);
+    }
+  }
 
   return (
     <header>
@@ -30,23 +38,25 @@ const Header = ({ cart, setCart }) => {
             <Link to="/shop">Shop</Link>
           </li>
           <li>
-            <button onClick={() => setClosing(false)}>Cart</button>
+            <button onClick={() => setModalIsOpen(true)}>
+              <img src={cartSvg} alt="cart" />
+            </button>
           </li>
         </ul>
         <dialog
-          className={`shopping-cart ${closing ? 'closing' : ''}`}
+          className={`shopping-cart ${!modalIsOpen ? 'closing' : ''}`}
           ref={modal}
+          onKeyDown={handleESC}
         >
           <div className="modal-header">
             <h2>Here&apos;s what&apos;s in your cart:</h2>
-            <button onClick={() => setClosing(true)}>X</button>
+            <button onClick={() => setModalIsOpen(false)}>X</button>
           </div>
           {cart.map((item) => {
             return (
               <Card key={item.id} item={item} cart={cart} setCart={setCart} />
             );
           })}
-          
         </dialog>
       </nav>
     </header>

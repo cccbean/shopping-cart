@@ -9,7 +9,10 @@
 - Shopping Cart
 
 ## Things to implement
-- Star display using the rating data from API
+- Categories are going to be their own paths
 - Change filter buttons to checkboxes?
 - Categories should have their own paths, filters should have search params
+
+## Bugs
+- Modal breaks when you close it with ESC bc ESC isn't set up to change the state
 

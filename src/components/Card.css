@@ -2,9 +2,20 @@
   background-color: white;
   padding: 1rem;
   display: grid;
+  justify-content: ;
+  align-items: end;
   text-align: center;
 }
 
 .card img {
   width: 200px;
+}
+
+.card button {
+  height: min-content;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--primary);
+  color: var(--background);
 }

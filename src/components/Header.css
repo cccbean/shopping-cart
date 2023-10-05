@@ -1,4 +1,6 @@
 header {
+  background-color: var(--primary);
+  color: var(--background);
   border-bottom: 1px solid black;
   padding: 2rem;
   display: grid;
@@ -21,7 +23,28 @@ h1 {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   gap: 2rem;
+}
+
+a {
+  color: inherit;
+}
+
+header button {
+  background-color: var(--accent);
+  border: none;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+button img {
+  width: 2rem;
+  fill: white;
 }
 
 .shopping-cart {

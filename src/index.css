@@ -1,9 +1,9 @@
 :root {
-  --text: hsl(330, 10%, 4%);
-  --background: hsl(340, 7%, 92%);
-  --primary: hsl(342, 7%, 52%);
-  --secondary: hsl(340, 7%, 82%);
-  --accent: hsl(344, 7%, 42%);
+  --text: hsl(330, 39%, 9%);
+  --background: hsl(0, 0%, 100%);
+  --primary: hsl(329, 39%, 44%);
+  --secondary: hsl(329, 38%, 81%);
+  --accent: hsl(329, 39%, 41%);
 }
 
 * {
@@ -16,3 +16,4 @@ body {
   color: var(--text);
   background-color: var(--background);
 }
+

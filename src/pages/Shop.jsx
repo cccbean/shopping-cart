@@ -43,7 +43,7 @@ const Shop = ({ cart, setCart }) => {
 
   return (
     <main>
-      <h1>Shop</h1>
+      <h2>Shop</h2>
       <ul className="product-filters">
         <li>
           <button onClick={() => setCategory(`men's clothing`)}>

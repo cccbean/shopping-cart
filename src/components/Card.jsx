@@ -20,7 +20,7 @@ const Card = ({ item, cart, setCart }) => {
       </Link>
       <h3>{item.title}</h3>
       <p>Category: {item.category}</p>
-      <p>{item.price}</p>
+      <p>${item.price}</p>
       {!item.inCart ? (
         <button onClick={addToCart}>Add to Cart</button>
       ) : (

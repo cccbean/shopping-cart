@@ -1,5 +1,18 @@
+:root {
+  --text: hsl(330, 10%, 4%);
+  --background: hsl(340, 7%, 92%);
+  --primary: hsl(342, 7%, 52%);
+  --secondary: hsl(340, 7%, 82%);
+  --accent: hsl(344, 7%, 42%);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
 }
